@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  serverdev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    image: serverdev
+    container_name: serverdev
+    restart: always
+    volumes:
+      - ./src:/opt/serverdev/src
+      - ./nodemon.json:/opt/serverdev/nodemon.json
+    ports:
+      - "4000:4000"
+      - "4001:9229"

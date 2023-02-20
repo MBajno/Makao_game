@@ -1,0 +1,24 @@
+.container {
+    background-color: darkgray;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.panel{
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    flex-direction: row;
+    border-radius: 50px;
+    padding: 25px;
+}
+.left{
+    border-right: solid gray;
+    padding: 10px
+}
+
+.right{
+    border-left: solid gray;
+    padding: 10px
+}

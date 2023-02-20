@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  clientdev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    image: clientdev
+    container_name: clientdev
+    restart: always
+    volumes:
+      - ./src:/opt/clientdev/src
+      - ./public:/opt/clientdev/public
+    ports:
+      - "80:3000"
+      - "3001:9229"
